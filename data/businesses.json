@@ -2,7 +2,7 @@
   {
     "id": "alfama-crypto-cafe",
     "name": "Alfama Crypto Café",
-    "description": "Cozy coffee shop that accepts BTC and ETH payments, ideal for working with fast Wi‑Fi.",
+    "description": "Cafetería acogedora que acepta pagos en SOL y USDC, ideal para trabajar con Wi‑Fi rápido.",
     "address": "Rua dos Remédios 45, 1100-443 Lisboa",
     "zone": "Alfama",
     "category": "Cafe",
@@ -10,7 +10,19 @@
     "phone": "+351912345678",
     "whatsapp": "https://wa.me/351912345678?text=Hello%20Crypto%20Caf%C3%A9",
     "googleMaps": "https://www.google.com/maps?q=38.7124,-9.1305",
-    "highlights": ["Terrace with views", "Outlets at every table", "Artisanal croissants"]
+    "highlights": ["Terraza con vistas", "Enchufes en todas las mesas", "Croissants artesanales"],
+    "tokens": ["SOL", "USDC"],
+    "verified": true,
+    "raypay_ready": true,
+    "promo": { "active": true, "text": "Café + pastel 15% con SOL" },
+    "photos": [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+    ],
+    "rating": 4.8,
+    "open_now": true,
+    "new": false,
+    "hours": { "open": "08:00", "close": "20:00" }
   },
   {
     "id": "baixa-blockchain-hub",
@@ -23,7 +35,18 @@
     "phone": "+351934567890",
     "whatsapp": "https://wa.me/351934567890?text=I%27d%20like%20to%20learn%20about%20memberships",
     "googleMaps": "https://www.google.com/maps?q=38.7129,-9.1399",
-    "highlights": ["Meeting rooms", "4K streaming", "Specialty coffee"]
+    "highlights": ["Salas de reuniones", "Streaming 4K", "Café de especialidad"],
+    "tokens": ["SOL", "USDT", "USDC"],
+    "verified": true,
+    "raypay_ready": false,
+    "promo": { "active": false, "text": "" },
+    "photos": [
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+    ],
+    "rating": 4.9,
+    "open_now": true,
+    "new": true,
+    "hours": { "open": "09:00", "close": "22:00" }
   },
   {
     "id": "lx-factory-crypto-market",
@@ -36,7 +59,19 @@
     "phone": "+351968000111",
     "whatsapp": "https://wa.me/351968000111?text=I%27d%20like%20to%20book%20a%20tour",
     "googleMaps": "https://www.google.com/maps?q=38.7038,-9.1784",
-    "highlights": ["24/7 crypto ATM", "Vegan stalls", "Night events"]
+    "highlights": ["Cajero cripto 24/7", "Puestos veganos", "Eventos nocturnos"],
+    "tokens": ["SOL", "BTC"],
+    "verified": false,
+    "raypay_ready": false,
+    "promo": { "active": true, "text": "Tour guiado gratuito los sábados" },
+    "photos": [
+      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1524230507669-05c4d1c0d2ff?auto=format&fit=crop&w=900&q=80"
+    ],
+    "rating": 4.6,
+    "open_now": false,
+    "new": false,
+    "hours": { "open": "10:00", "close": "23:00" }
   },
   {
     "id": "parque-das-nações-crypto-lab",
@@ -49,7 +84,18 @@
     "phone": "+351977654321",
     "whatsapp": "https://wa.me/351977654321?text=Interested%20in%20workshops",
     "googleMaps": "https://www.google.com/maps?q=38.7681,-9.0946",
-    "highlights": ["Personalized mentoring", "IoT lab", "Programs for startups"]
+    "highlights": ["Mentoría personalizada", "Laboratorio IoT", "Programas para startups"],
+    "tokens": ["SOL", "ETH", "USDC"],
+    "verified": true,
+    "raypay_ready": true,
+    "promo": { "active": true, "text": "Primera mentoría gratuita" },
+    "photos": [
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+    ],
+    "rating": 4.7,
+    "open_now": true,
+    "new": false,
+    "hours": { "open": "08:00", "close": "18:00" }
   },
   {
     "id": "chiado-ledger-lounge",
@@ -62,6 +108,17 @@
     "phone": "+351965432100",
     "whatsapp": "https://wa.me/351965432100?text=Book%20a%20table",
     "googleMaps": "https://www.google.com/maps?q=38.7118,-9.1423",
-    "highlights": ["Crypto cocktail menu", "DJ sets", "Lightning ready"]
+    "highlights": ["Carta de cócteles cripto", "DJ sets", "Lightning ready"],
+    "tokens": ["SOL", "BTC"],
+    "verified": false,
+    "raypay_ready": false,
+    "promo": { "active": true, "text": "Happy hour 2x1 hasta las 20h" },
+    "photos": [
+      "https://images.unsplash.com/photo-1438557068880-c5f474830377?auto=format&fit=crop&w=900&q=80"
+    ],
+    "rating": 4.5,
+    "open_now": true,
+    "new": true,
+    "hours": { "open": "17:00", "close": "02:00" }
   }
 ]
