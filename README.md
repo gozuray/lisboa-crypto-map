@@ -1,20 +1,20 @@
 # Lisboa Crypto Map
 
-Interactive HTML, CSS and vanilla JS map to discover Lisbon businesses that accept cryptocurrency. Content is sourced from `data/businesses.json` and rendered across multiple views: home, individual detail pages and zone subpages.
+Mapa interactivo en HTML, CSS y JS vanilla para descubrir negocios de Lisboa que aceptan criptomonedas. El contenido se alimenta desde `data/businesses.json` y se renderiza en distintas vistas: home, fichas individuales y subpáginas por zona.
 
-## Features
-- Leaflet with dynamic markers loaded from JSON.
-- Responsive list with Google Maps and WhatsApp links.
-- Individual business pages (`business.html?id=...`).
-- Subpages for key zones: Baixa, Alfama and Parque das Nações.
-- Form for adding new businesses (local demo without backend).
+## Características
+- Leaflet con markers dinámicos desde JSON.
+- Listado responsivo con llamadas a Google Maps y WhatsApp.
+- Fichas individuales por negocio (`business.html?id=...`).
+- Subpáginas para zonas clave: Baixa, Alfama y Parque das Nações.
+- Formulario para agregar nuevos negocios (demo local sin backend).
 
-## Structure
-- `index.html`: home with map and list.
-- `zones/*.html`: subpages filtered by zone.
-- `business.html`: detail page.
-- `assets/css/style.css`: minimal styles.
-- `assets/js/app.js`: rendering logic and Leaflet setup.
-- `data/businesses.json`: data source.
+## Estructura
+- `index.html`: home con mapa y listado.
+- `zones/*.html`: subpáginas filtradas por zona.
+- `business.html`: ficha de detalle.
+- `assets/css/style.css`: estilos minimalistas.
+- `assets/js/app.js`: lógica de render y Leaflet.
+- `data/businesses.json`: fuente de datos.
 
-Open `index.html` in a static server (e.g. `python -m http.server`) to avoid CORS restrictions when loading the JSON.
+Abre `index.html` en un servidor estático (ej. `python -m http.server`) para evitar restricciones de CORS al cargar el JSON.

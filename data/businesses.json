@@ -2,66 +2,66 @@
   {
     "id": "alfama-crypto-cafe",
     "name": "Alfama Crypto Café",
-    "description": "Cozy coffee shop that accepts BTC and ETH payments, ideal for working with fast Wi‑Fi.",
+    "description": "Cafetería acogedora que acepta pagos en BTC y ETH, ideal para trabajar con Wi‑Fi rápido.",
     "address": "Rua dos Remédios 45, 1100-443 Lisboa",
     "zone": "Alfama",
-    "category": "Cafe",
+    "category": "Café",
     "coords": { "lat": 38.7124, "lng": -9.1305 },
     "phone": "+351912345678",
-    "whatsapp": "https://wa.me/351912345678?text=Hello%20Crypto%20Caf%C3%A9",
+    "whatsapp": "https://wa.me/351912345678?text=Olá%20Crypto%20Café",
     "googleMaps": "https://www.google.com/maps?q=38.7124,-9.1305",
-    "highlights": ["Terrace with views", "Outlets at every table", "Artisanal croissants"]
+    "highlights": ["Terraza con vistas", "Enchufes en todas las mesas", "Croissants artesanales"]
   },
   {
     "id": "baixa-blockchain-hub",
     "name": "Baixa Blockchain Hub",
-    "description": "Coworking space with weekly Web3 events and an NFT showroom area.",
+    "description": "Espacio de coworking con eventos semanales sobre Web3 y área de showroom NFT.",
     "address": "Rua Augusta 200, 1100-053 Lisboa",
     "zone": "Baixa",
-    "category": "Coworking",
+    "category": "Cowork",
     "coords": { "lat": 38.7129, "lng": -9.1399 },
     "phone": "+351934567890",
-    "whatsapp": "https://wa.me/351934567890?text=I%27d%20like%20to%20learn%20about%20memberships",
+    "whatsapp": "https://wa.me/351934567890?text=Quero%20saber%20sobre%20membros",
     "googleMaps": "https://www.google.com/maps?q=38.7129,-9.1399",
-    "highlights": ["Meeting rooms", "4K streaming", "Specialty coffee"]
+    "highlights": ["Salas de reuniones", "Streaming 4K", "Café de especialidad"]
   },
   {
     "id": "lx-factory-crypto-market",
     "name": "LX Factory Crypto Market",
-    "description": "Artisan market with a crypto payment area and Bitcoin ATM.",
+    "description": "Mercado de artesanos con zona de pago cripto y cajero automático Bitcoin.",
     "address": "Rua Rodrigues de Faria 103, 1300-501 Lisboa",
     "zone": "Alcântara",
-    "category": "Market",
+    "category": "Mercado",
     "coords": { "lat": 38.7038, "lng": -9.1784 },
     "phone": "+351968000111",
-    "whatsapp": "https://wa.me/351968000111?text=I%27d%20like%20to%20book%20a%20tour",
+    "whatsapp": "https://wa.me/351968000111?text=Gostaria%20de%20reservar%20um%20tour",
     "googleMaps": "https://www.google.com/maps?q=38.7038,-9.1784",
-    "highlights": ["24/7 crypto ATM", "Vegan stalls", "Night events"]
+    "highlights": ["Cajero cripto 24/7", "Puestos veganos", "Eventos nocturnos"]
   },
   {
     "id": "parque-das-nações-crypto-lab",
     "name": "Parque das Nações Crypto Lab",
-    "description": "Fintech innovation lab with workshops and DeFi mentors.",
+    "description": "Laboratorio de innovación fintech con talleres y mentores DeFi.",
     "address": "Av. Dom João II 35, 1990-083 Lisboa",
     "zone": "Parque das Nações",
     "category": "Innovation Lab",
     "coords": { "lat": 38.7681, "lng": -9.0946 },
     "phone": "+351977654321",
-    "whatsapp": "https://wa.me/351977654321?text=Interested%20in%20workshops",
+    "whatsapp": "https://wa.me/351977654321?text=Interesado%20en%20workshops",
     "googleMaps": "https://www.google.com/maps?q=38.7681,-9.0946",
-    "highlights": ["Personalized mentoring", "IoT lab", "Programs for startups"]
+    "highlights": ["Mentoría personalizada", "Laboratorio IoT", "Programas para startups"]
   },
   {
     "id": "chiado-ledger-lounge",
     "name": "Chiado Ledger Lounge",
-    "description": "Cocktail lounge with a blockchain-inspired drinks menu and lightning payments.",
+    "description": "Lounge de coctelería con menú de tragos inspirados en blockchains y pagos lightning.",
     "address": "Largo do Chiado 9, 1200-108 Lisboa",
     "zone": "Chiado",
     "category": "Bar",
     "coords": { "lat": 38.7118, "lng": -9.1423 },
     "phone": "+351965432100",
-    "whatsapp": "https://wa.me/351965432100?text=Book%20a%20table",
+    "whatsapp": "https://wa.me/351965432100?text=Reservar%20mesa",
     "googleMaps": "https://www.google.com/maps?q=38.7118,-9.1423",
-    "highlights": ["Crypto cocktail menu", "DJ sets", "Lightning ready"]
+    "highlights": ["Carta de cócteles cripto", "DJ sets", "Lightning ready"]
   }
 ]
