@@ -1,0 +1,110 @@
+{
+  "titles": {
+    "home": "Mapa Cripto de Lisboa",
+    "detail": "Perfil do negócio · Mapa Cripto de Lisboa",
+    "zone": "{zone} · Mapa Cripto de Lisboa"
+  },
+  "navigation": {
+    "home": "Início",
+    "baixa": "Baixa",
+    "alfama": "Alfama",
+    "parque": "Parque das Nações"
+  },
+  "hero": {
+    "pill": "Mapa interativo · Pagamentos em cripto",
+    "title": "Locais Web3 em Lisboa com pesquisa avançada e perfis ricos.",
+    "description": "Explore negócios que aceitam cripto, filtre por tokens, categorias e zonas, e partilhe localizações via Google Maps e WhatsApp. Tudo é alimentado por uma fonte JSON pronta para escalar para novas cidades."
+  },
+  "listing": {
+    "pill": "Listagem",
+    "title": "Negócios em destaque",
+    "baixa": "Mapa da Baixa",
+    "alfama": "Mapa de Alfama",
+    "parque": "Mapa do Parque",
+    "meta": "{count} negócios · {openNow} abertos agora"
+  },
+  "routes": {
+    "pill": "Rotas cripto",
+    "title": "Sugestões rápidas",
+    "subtitle": "Rotas combinadas com negócios abertos e boa reputação.",
+    "routeTitle": "Rota {index}: {zone}"
+  },
+  "form": {
+    "pill": "Formulário",
+    "title": "Adicionar novo negócio",
+    "fields": {
+      "name": { "label": "Nome", "placeholder": "Nome do negócio" },
+      "area": { "label": "Zona", "placeholder": "Selecionar zona" },
+      "category": { "label": "Categoria", "placeholder": "Cafeteria, cowork, bar" },
+      "phone": { "label": "Telefone", "placeholder": "+351..." },
+      "tokens": { "label": "Tokens", "placeholder": "SOL, USDC" },
+      "rating": { "label": "Avaliação", "placeholder": "4.8" },
+      "description": { "label": "Descrição", "placeholder": "O que torna este lugar único?" },
+      "address": { "label": "Endereço", "placeholder": "Rua ..." },
+      "lat": { "label": "Latitude" },
+      "lng": { "label": "Longitude" },
+      "highlights": { "label": "Destaques (separados por vírgula)", "placeholder": "WiFi, Esplanada, Eventos" }
+    },
+    "submit": "Adicionar",
+    "reset": "Limpar",
+    "toast": "Negócio adicionado localmente (demo)"
+  },
+  "filters": {
+    "label": "Filtros",
+    "searchPlaceholder": "Pesquisar por nome ou descrição",
+    "searchLabel": "Pesquisar",
+    "area": "Zona",
+    "category": "Categoria",
+    "token": "Token",
+    "chips": {
+      "verified": "Verificado",
+      "promo": "Promo ativa",
+      "openNow": "Aberto agora",
+      "raypay": "Pronto para RayPay",
+      "reset": "Limpar filtros"
+    }
+  },
+  "cards": {
+    "badges": {
+      "verified": "Verificado",
+      "raypay": "Pronto para RayPay",
+      "new": "Novo",
+      "promo": "Promo ativa"
+    },
+    "status": { "open": "Aberto agora", "closed": "Fechado" },
+    "actions": { "viewProfile": "Ver perfil", "googleMaps": "Google Maps", "whatsapp": "WhatsApp" },
+    "hours": "{open} - {close}"
+  },
+  "zone": {
+    "pill": "Zona",
+    "summary": "Explore pontos cripto em {zone}. Esta seleção atualiza do JSON para manter os dados consistentes entre as áreas.",
+    "title": "Pontos cripto em {zone}",
+    "footer": "Dados do JSON · Subpágina de {zone}.",
+    "back": "← Início",
+    "openMaps": "Abrir no Google Maps"
+  },
+  "detail": {
+    "notFound": "Negócio não encontrado.",
+    "back": "← Voltar",
+    "address": "Endereço",
+    "contact": "Contato",
+    "phone": "Tel: {phone}",
+    "sendWhatsapp": "Enviar WhatsApp",
+    "openMaps": "Abrir no Google Maps"
+  },
+  "footer": {
+    "main": "Mapa Cripto de Lisboa · Dados em JSON · Modo demo com backend opcional.",
+    "detail": "Perfil individual com links para Google Maps e WhatsApp."
+  },
+  "mobileNav": {
+    "listing": "Listagem",
+    "routes": "Rotas",
+    "add": "Adicionar",
+    "map": "Mapa",
+    "home": "Início",
+    "profile": "Perfil"
+  },
+  "language": {
+    "label": "Idioma"
+  }
+}

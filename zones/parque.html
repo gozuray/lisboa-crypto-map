@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Crypto routes and businesses in Parque das Nações with verified profiles." />
-  <title>Parque das Nações · Lisboa Crypto Map</title>
+  <title data-i18n="titles.zone">Parque das Nações · Lisboa Crypto Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
@@ -17,24 +17,27 @@
       </svg>
       Lisboa <span>Crypto Map</span>
     </div>
-    <nav aria-label="Main navigation">
-      <a href="../index.html">Home</a>
-      <a href="baixa.html" data-zone="Baixa">Baixa</a>
-      <a href="alfama.html" data-zone="Alfama">Alfama</a>
-      <a href="parque.html" class="active" data-zone="Parque das Nações">Parque das Nações</a>
-    </nav>
+    <div class="header-actions">
+      <nav aria-label="Main navigation">
+        <a href="../index.html" data-i18n="navigation.home">Home</a>
+        <a href="baixa.html" data-zone="Baixa" data-i18n="navigation.baixa">Baixa</a>
+        <a href="alfama.html" data-zone="Alfama" data-i18n="navigation.alfama">Alfama</a>
+        <a href="parque.html" class="active" data-zone="Parque das Nações" data-i18n="navigation.parque">Parque das Nações</a>
+      </nav>
+      <div class="language-switcher" id="language-switcher"></div>
+    </div>
   </header>
 
   <main class="app-shell">
     <section class="zone-hero">
       <div>
-        <p class="pill">Area</p>
+        <p class="pill" data-i18n="zone.pill">Area</p>
         <h1 data-zone-headline>Parque das Nações</h1>
         <p class="muted" data-zone-summary></p>
         <div id="filters" class="filters" aria-label="Search and filters"></div>
         <div class="actions">
-          <a id="back-home" class="button" href="../index.html">← Home</a>
-          <a class="button" href="https://goo.gl/maps/d6R1xCSJ2pPQ6nxd8" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a id="back-home" class="button" href="../index.html" data-i18n="zone.back">← Home</a>
+          <a class="button" href="https://goo.gl/maps/d6R1xCSJ2pPQ6nxd8" target="_blank" rel="noopener" data-i18n="zone.openMaps">Open in Google Maps</a>
         </div>
       </div>
       <div id="map" role="presentation"></div>
@@ -43,7 +46,7 @@
     <section class="section" aria-labelledby="title-listado">
       <div class="title section-header">
         <div>
-          <p class="pill">Businesses</p>
+          <p class="pill" data-i18n="listing.pill">Businesses</p>
           <h2 id="title-listado">Crypto spots in Parque das Nações</h2>
           <p class="muted" id="list-meta" aria-live="polite"></p>
         </div>
@@ -53,17 +56,18 @@
   </main>
 
   <footer>
-    Data from JSON · Parque das Nações subpage.
+    <span data-i18n="zone.footer">Data from JSON · Parque das Nações subpage.</span>
   </footer>
 
   <nav class="mobile-nav" aria-label="Quick actions">
-    <a href="#title-listado">Listing</a>
-    <a href="#map">Map</a>
-    <a href="#filters">Filters</a>
-    <a href="#back-home">Home</a>
+    <a href="#title-listado" data-i18n="mobileNav.listing">Listing</a>
+    <a href="#map" data-i18n="mobileNav.map">Map</a>
+    <a href="#filters" data-i18n="filters.label">Filters</a>
+    <a href="#back-home" data-i18n="navigation.home">Home</a>
   </nav>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/app.js"></script>
 </body>
 </html>

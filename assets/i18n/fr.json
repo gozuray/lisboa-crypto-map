@@ -1,0 +1,110 @@
+{
+  "titles": {
+    "home": "Carte Crypto de Lisbonne",
+    "detail": "Profil d'entreprise · Carte Crypto de Lisbonne",
+    "zone": "{zone} · Carte Crypto de Lisbonne"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "baixa": "Baixa",
+    "alfama": "Alfama",
+    "parque": "Parque das Nações"
+  },
+  "hero": {
+    "pill": "Carte interactive · Paiements crypto",
+    "title": "Lieux Web3 à Lisbonne avec recherche avancée et profils riches.",
+    "description": "Découvrez les commerces qui acceptent les crypto, filtrez par tokens, catégories et zones, et partagez les emplacements via Google Maps et WhatsApp. Tout repose sur une source JSON prête à s'étendre à de nouvelles villes."
+  },
+  "listing": {
+    "pill": "Liste",
+    "title": "Commerces en avant",
+    "baixa": "Carte de Baixa",
+    "alfama": "Carte d'Alfama",
+    "parque": "Carte du Parc",
+    "meta": "{count} commerces · {openNow} ouverts maintenant"
+  },
+  "routes": {
+    "pill": "Itinéraires crypto",
+    "title": "Suggestions rapides",
+    "subtitle": "Itinéraires combinés avec des commerces ouverts et bien notés.",
+    "routeTitle": "Itinéraire {index} : {zone}"
+  },
+  "form": {
+    "pill": "Formulaire",
+    "title": "Ajouter un commerce",
+    "fields": {
+      "name": { "label": "Nom", "placeholder": "Nom du commerce" },
+      "area": { "label": "Zone", "placeholder": "Sélectionner la zone" },
+      "category": { "label": "Catégorie", "placeholder": "Café, coworking, bar" },
+      "phone": { "label": "Téléphone", "placeholder": "+351..." },
+      "tokens": { "label": "Tokens", "placeholder": "SOL, USDC" },
+      "rating": { "label": "Note", "placeholder": "4.8" },
+      "description": { "label": "Description", "placeholder": "Qu'est-ce qui rend ce lieu unique ?" },
+      "address": { "label": "Adresse", "placeholder": "Rua ..." },
+      "lat": { "label": "Latitude" },
+      "lng": { "label": "Longitude" },
+      "highlights": { "label": "Points forts (séparés par des virgules)", "placeholder": "WiFi, Terrasse, Événements" }
+    },
+    "submit": "Ajouter",
+    "reset": "Effacer",
+    "toast": "Commerce ajouté localement (démo)"
+  },
+  "filters": {
+    "label": "Filtres",
+    "searchPlaceholder": "Chercher par nom ou description",
+    "searchLabel": "Rechercher",
+    "area": "Zone",
+    "category": "Catégorie",
+    "token": "Token",
+    "chips": {
+      "verified": "Vérifié",
+      "promo": "Promo active",
+      "openNow": "Ouvert maintenant",
+      "raypay": "Prêt pour RayPay",
+      "reset": "Réinitialiser"
+    }
+  },
+  "cards": {
+    "badges": {
+      "verified": "Vérifié",
+      "raypay": "Prêt pour RayPay",
+      "new": "Nouveau",
+      "promo": "Promo active"
+    },
+    "status": { "open": "Ouvert maintenant", "closed": "Fermé" },
+    "actions": { "viewProfile": "Voir le profil", "googleMaps": "Google Maps", "whatsapp": "WhatsApp" },
+    "hours": "{open} - {close}"
+  },
+  "zone": {
+    "pill": "Zone",
+    "summary": "Découvrez les lieux crypto de {zone}. Cette sélection est mise à jour depuis le JSON pour garder des données cohérentes entre les zones.",
+    "title": "Lieux crypto à {zone}",
+    "footer": "Données depuis JSON · Sous-page de {zone}.",
+    "back": "← Accueil",
+    "openMaps": "Ouvrir dans Google Maps"
+  },
+  "detail": {
+    "notFound": "Commerce introuvable.",
+    "back": "← Retour",
+    "address": "Adresse",
+    "contact": "Contact",
+    "phone": "Tél : {phone}",
+    "sendWhatsapp": "Envoyer sur WhatsApp",
+    "openMaps": "Ouvrir dans Google Maps"
+  },
+  "footer": {
+    "main": "Carte Crypto de Lisbonne · Données JSON · Mode démo avec backend optionnel.",
+    "detail": "Profil individuel avec liens vers Google Maps et WhatsApp."
+  },
+  "mobileNav": {
+    "listing": "Liste",
+    "routes": "Itinéraires",
+    "add": "Ajouter",
+    "map": "Carte",
+    "home": "Accueil",
+    "profile": "Profil"
+  },
+  "language": {
+    "label": "Langue"
+  }
+}
