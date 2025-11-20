@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mapa de negocios cripto en Lisboa con búsqueda, filtros y fichas verificadas." />
+  <meta name="description" content="Lisbon crypto business map with search, filters, and verified profiles." />
   <title>Lisboa Crypto Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -17,7 +17,7 @@
       </svg>
       Lisboa <span>Crypto Map</span>
     </div>
-    <nav aria-label="Navegación principal">
+    <nav aria-label="Main navigation">
       <a href="index.html" class="active" data-zone="">Home</a>
       <a href="zones/baixa.html" data-zone="Baixa">Baixa</a>
       <a href="zones/alfama.html" data-zone="Alfama">Alfama</a>
@@ -28,11 +28,11 @@
   <main class="app-shell">
     <section class="hero hero-app">
       <div class="hero-copy">
-        <p class="pill">Mapa interactivo · Pagos cripto</p>
-        <h1>Spots web3 en Lisboa con búsqueda avanzada y fichas enriquecidas.</h1>
-        <p>Explora negocios que aceptan cripto, filtra por tokens, categorías y zonas, y comparte ubicaciones con Google Maps y WhatsApp. Todo se alimenta desde un JSON listo para escalar a nuevas ciudades.</p>
+        <p class="pill">Interactive map · Crypto payments</p>
+        <h1>Web3 spots in Lisbon with advanced search and rich profiles.</h1>
+        <p>Explore businesses that accept crypto, filter by tokens, categories, and areas, and share locations via Google Maps and WhatsApp. Everything is powered by a JSON source ready to scale to new cities.</p>
         <div id="badges" class="callouts" aria-live="polite"></div>
-        <div id="filters" class="filters" aria-label="Buscador y filtros"></div>
+        <div id="filters" class="filters" aria-label="Search and filters"></div>
       </div>
       <div id="map" role="presentation"></div>
     </section>
@@ -40,14 +40,14 @@
     <section class="section" aria-labelledby="title-listado">
       <div class="title section-header">
         <div>
-          <p class="pill">Listado</p>
-          <h2 id="title-listado">Negocios destacados</h2>
+          <p class="pill">Listing</p>
+          <h2 id="title-listado">Featured businesses</h2>
           <p class="muted" id="list-meta" aria-live="polite"></p>
         </div>
         <div class="actions">
-          <a class="button" href="zones/baixa.html">Mapa Baixa</a>
-          <a class="button" href="zones/alfama.html">Mapa Alfama</a>
-          <a class="button" href="zones/parque.html">Mapa Parque</a>
+          <a class="button" href="zones/baixa.html">Baixa map</a>
+          <a class="button" href="zones/alfama.html">Alfama map</a>
+          <a class="button" href="zones/parque.html">Parque map</a>
         </div>
       </div>
       <div id="business-list" class="grid cards-grid" aria-live="polite"></div>
@@ -56,9 +56,9 @@
     <section class="section" aria-labelledby="title-rutas">
       <div class="title section-header">
         <div>
-          <p class="pill">Rutas cripto</p>
-          <h2 id="title-rutas">Sugerencias rápidas</h2>
-          <p class="muted">Trayectos combinados con negocios abiertos ahora y buena reputación.</p>
+          <p class="pill">Crypto routes</p>
+          <h2 id="title-rutas">Quick suggestions</h2>
+          <p class="muted">Combined routes with businesses open now and strong reputations.</p>
         </div>
       </div>
       <div id="crypto-routes" class="grid routes-grid" aria-live="polite"></div>
@@ -67,51 +67,51 @@
     <section class="section" aria-labelledby="title-form">
       <div class="title section-header">
         <div>
-          <p class="pill">Formulario</p>
-          <h2 id="title-form">Agregar nuevo negocio</h2>
+          <p class="pill">Form</p>
+          <h2 id="title-form">Add new business</h2>
         </div>
         <span id="form-toast" class="muted" role="status" aria-live="polite">&nbsp;</span>
       </div>
       <form id="business-form">
         <div class="grid input-grid">
-          <label>Nombre<input name="name" required placeholder="Nombre del negocio" /></label>
-          <label>Zona<select name="zone" required>
-            <option value="">Selecciona zona</option>
+          <label>Name<input name="name" required placeholder="Business name" /></label>
+          <label>Area<select name="zone" required>
+            <option value="">Select area</option>
             <option>Baixa</option>
             <option>Alfama</option>
             <option>Parque das Nações</option>
             <option>Chiado</option>
             <option>Alcântara</option>
           </select></label>
-          <label>Categoría<input name="category" required placeholder="Café, cowork, bar" /></label>
-          <label>Teléfono<input name="phone" required placeholder="+351..." /></label>
+          <label>Category<input name="category" required placeholder="Coffee shop, cowork, bar" /></label>
+          <label>Phone<input name="phone" required placeholder="+351..." /></label>
           <label>Tokens<input name="tokens" placeholder="SOL, USDC" /></label>
           <label>Rating<input name="rating" type="number" step="0.1" min="1" max="5" placeholder="4.8" /></label>
         </div>
-        <label>Descripción<textarea name="description" required placeholder="¿Qué hace único al lugar?"></textarea></label>
-        <label>Dirección<input name="address" required placeholder="Rua ..." /></label>
+        <label>Description<textarea name="description" required placeholder="What makes this place unique?"></textarea></label>
+        <label>Address<input name="address" required placeholder="Rua ..." /></label>
         <div class="grid input-grid small-grid">
-          <label>Latitud<input name="lat" type="number" step="0.0001" required /></label>
-          <label>Longitud<input name="lng" type="number" step="0.0001" required /></label>
+          <label>Latitude<input name="lat" type="number" step="0.0001" required /></label>
+          <label>Longitude<input name="lng" type="number" step="0.0001" required /></label>
         </div>
-        <label>Diferenciales (separados por coma)<input name="highlights" placeholder="WiFi, Terraza, Eventos" /></label>
+        <label>Highlights (comma-separated)<input name="highlights" placeholder="WiFi, Terrace, Events" /></label>
         <div class="actions">
-          <button class="primary" type="submit">Agregar</button>
-          <button type="reset" class="button">Limpiar</button>
+          <button class="primary" type="submit">Add</button>
+          <button type="reset" class="button">Clear</button>
         </div>
       </form>
     </section>
   </main>
 
   <footer>
-    Lisboa Crypto Map · Datos desde JSON · Modo demo con backend opcional.
+    Lisboa Crypto Map · Data from JSON · Demo mode with optional backend.
   </footer>
 
-  <nav class="mobile-nav" aria-label="Acciones rápidas">
-    <a href="#title-listado">Listado</a>
-    <a href="#title-rutas">Rutas</a>
-    <a href="#title-form">Agregar</a>
-    <a href="#map">Mapa</a>
+  <nav class="mobile-nav" aria-label="Quick actions">
+    <a href="#title-listado">Listing</a>
+    <a href="#title-rutas">Routes</a>
+    <a href="#title-form">Add</a>
+    <a href="#map">Map</a>
   </nav>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
