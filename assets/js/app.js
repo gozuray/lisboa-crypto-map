@@ -33,7 +33,7 @@ function createMarker(business) {
   marker.bindPopup(`
     <strong>${business.name}</strong><br/>
     ${business.zone} · ${business.category}<br/>
-    <a href="business.html?id=${business.id}">Ver ficha</a>
+    <a href="business.html?id=${business.id}">View profile</a>
   `);
   marker.addTo(state.map);
   state.markers.push(marker);
@@ -80,7 +80,7 @@ function renderList() {
             ${business.highlights.map((h) => `<span class="pill">${h}</span>`).join('')}
           </div>
           <div class="actions">
-            <a class="button primary" href="business.html?id=${business.id}">Ver ficha</a>
+            <a class="button primary" href="business.html?id=${business.id}">View profile</a>
             <a class="button" href="${business.googleMaps}" target="_blank" rel="noopener">Google Maps</a>
             <a class="button" href="${business.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>
           </div>
@@ -132,7 +132,7 @@ function handleForm() {
       .map((h) => h.trim())
       .filter(Boolean);
     business.googleMaps = `https://www.google.com/maps?q=${business.coords.lat},${business.coords.lng}`;
-    business.whatsapp = `https://wa.me/${business.phone.replace(/[^\d]/g, '')}?text=${encodeURIComponent('Olá, tenho interesse!')}`;
+    business.whatsapp = `https://wa.me/${business.phone.replace(/[^\d]/g, '')}?text=${encodeURIComponent("Hi, I'm interested!")}`;
 
     state.businesses.push(business);
     filterByZone(state.selectedZone);
@@ -140,7 +140,7 @@ function handleForm() {
 
     const toast = document.querySelector('#form-toast');
     if (toast) {
-      toast.textContent = 'Negócio agregado localmente (demo)';
+      toast.textContent = 'Business added locally (demo)';
       toast.style.opacity = '1';
       setTimeout(() => (toast.style.opacity = '0'), 2500);
     }
@@ -153,7 +153,7 @@ function renderZonePage(zone) {
   if (!headline || !summary) return;
 
   headline.textContent = `${zone}`;
-  summary.textContent = `Explora spots cripto en ${zone}. Esta selección se actualiza desde JSON para mantener datos consistentes entre zonas.`;
+  summary.textContent = `Explore crypto spots in ${zone}. This selection updates from JSON to keep data consistent across zones.`;
   filterByZone(zone);
 
   const backLink = document.querySelector('#back-home');
@@ -170,7 +170,7 @@ function renderBusinessDetail(id) {
   if (!container) return;
   const business = state.businesses.find((b) => b.id === id);
   if (!business) {
-    container.innerHTML = '<p class="muted">Negocio no encontrado.</p>';
+    container.innerHTML = '<p class="muted">Business not found.</p>';
     return;
   }
 
@@ -181,22 +181,22 @@ function renderBusinessDetail(id) {
           <p class="pill">${business.zone} · ${business.category}</p>
           <h2 style="margin: 6px 0 0;">${business.name}</h2>
         </div>
-        <a class="button" href="index.html">← Volver</a>
+        <a class="button" href="index.html">← Back</a>
       </div>
       <p class="muted">${business.description}</p>
       <div class="list-item">
         <div>
-          <h4>Dirección</h4>
+          <h4>Address</h4>
           <small>${business.address}</small>
         </div>
-        <a class="button" href="${business.googleMaps}" target="_blank">Abrir en Google Maps</a>
+        <a class="button" href="${business.googleMaps}" target="_blank">Open in Google Maps</a>
       </div>
       <div class="list-item">
         <div>
-          <h4>Contacto</h4>
-          <small>Tel: ${business.phone}</small>
+          <h4>Contact</h4>
+          <small>Phone: ${business.phone}</small>
         </div>
-        <a class="button" href="${business.whatsapp}" target="_blank">Enviar WhatsApp</a>
+        <a class="button" href="${business.whatsapp}" target="_blank">Send WhatsApp</a>
       </div>
       <ul class="highlight-list">
         ${business.highlights.map((h) => `<li>${h}</li>`).join('')}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,9 +26,9 @@
 
   <section class="hero">
     <div class="hero-copy">
-      <p class="pill">Mapa interactivo · Pagos cripto</p>
-      <h1>Spots web3 en Lisboa con mapas, links y fichas.</h1>
-      <p>Explora negocios que aceptan cripto, navega por zonas y comparte ubicaciones con Google Maps y WhatsApp. Todo se alimenta desde un JSON para mantener los datos sincronizados.</p>
+      <p class="pill">Interactive map · Crypto payments</p>
+      <h1>Web3 spots in Lisbon with maps, links and profiles.</h1>
+      <p>Explore businesses that accept crypto, browse by zones, and share locations through Google Maps and WhatsApp. Everything is powered by a JSON file to keep data in sync.</p>
       <div id="badges" class="callouts"></div>
     </div>
     <div id="map"></div>
@@ -37,13 +37,13 @@
   <section class="section">
     <div class="title" style="justify-content: space-between; align-items: center;">
       <div>
-        <p class="pill">Listado</p>
-        <h2>Negocios destacados</h2>
+        <p class="pill">Listing</p>
+        <h2>Featured businesses</h2>
       </div>
       <div class="actions">
-        <a class="button" href="zones/baixa.html">Mapa Baixa</a>
-        <a class="button" href="zones/alfama.html">Mapa Alfama</a>
-        <a class="button" href="zones/parque.html">Mapa Parque</a>
+        <a class="button" href="zones/baixa.html">Baixa map</a>
+        <a class="button" href="zones/alfama.html">Alfama map</a>
+        <a class="button" href="zones/parque.html">Parque map</a>
       </div>
     </div>
     <div id="business-list" class="grid"></div>
@@ -52,38 +52,38 @@
   <section class="section">
     <div class="title" style="justify-content: space-between; align-items: center;">
       <div>
-        <p class="pill">Formulario</p>
-        <h2>Agregar nuevo negocio</h2>
+        <p class="pill">Form</p>
+        <h2>Add new business</h2>
       </div>
       <span id="form-toast" class="muted" style="opacity:0; transition: .4s;">&nbsp;</span>
     </div>
     <form id="business-form">
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-        <label>Nombre<input name="name" required placeholder="Nombre del negocio" /></label>
-        <label>Zona<select name="zone" required>
-          <option value="">Selecciona zona</option>
+        <label>Name<input name="name" required placeholder="Business name" /></label>
+        <label>Zone<select name="zone" required>
+          <option value="">Select a zone</option>
           <option>Baixa</option>
           <option>Alfama</option>
           <option>Parque das Nações</option>
           <option>Chiado</option>
           <option>Alcântara</option>
         </select></label>
-        <label>Categoría<input name="category" required placeholder="Café, cowork, bar" /></label>
-        <label>Teléfono<input name="phone" required placeholder="+351..." /></label>
+        <label>Category<input name="category" required placeholder="Cafe, cowork, bar" /></label>
+        <label>Phone<input name="phone" required placeholder="+351..." /></label>
       </div>
-      <label>Descripción<textarea name="description" required placeholder="¿Qué hace único al lugar?" ></textarea></label>
-      <label>Dirección<input name="address" required placeholder="Rua ..." /></label>
+      <label>Description<textarea name="description" required placeholder="What makes the place unique?" ></textarea></label>
+      <label>Address<input name="address" required placeholder="Rua ..." /></label>
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
-        <label>Latitud<input name="lat" type="number" step="0.0001" required /></label>
-        <label>Longitud<input name="lng" type="number" step="0.0001" required /></label>
+        <label>Latitude<input name="lat" type="number" step="0.0001" required /></label>
+        <label>Longitude<input name="lng" type="number" step="0.0001" required /></label>
       </div>
-      <label>Diferenciales (separados por coma)<input name="highlights" placeholder="WiFi, Terraza, Eventos" /></label>
-      <button class="primary" type="submit">Agregar</button>
+      <label>Highlights (comma separated)<input name="highlights" placeholder="WiFi, Terrace, Events" /></label>
+      <button class="primary" type="submit">Add</button>
     </form>
   </section>
 
   <footer>
-    Lisboa Crypto Map · Datos desde JSON · Modo demo sin backend.
+    Lisboa Crypto Map · Data from JSON · Demo mode without backend.
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
