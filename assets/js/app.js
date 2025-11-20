@@ -74,26 +74,26 @@ function renderFilters() {
   const container = document.querySelector('#filters');
   if (!container) return;
 
-  const categories = buildSelectOptions(state.businesses.map((b) => b.category), 'Categoría');
-  const zones = buildSelectOptions(state.businesses.map((b) => b.zone), 'Zona');
+  const categories = buildSelectOptions(state.businesses.map((b) => b.category), 'Category');
+  const zones = buildSelectOptions(state.businesses.map((b) => b.zone), 'Area');
   const tokens = buildSelectOptions(state.businesses.flatMap((b) => b.tokens || []), 'Token');
 
   container.innerHTML = `
     <div class="filter-grid">
       <div class="search-box">
         <svg width="18" height="18" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="11" r="5.5" stroke="currentColor" stroke-width="1.5"/></svg>
-        <input type="search" id="search" placeholder="Buscar por nombre o descripción" aria-label="Buscar" />
+        <input type="search" id="search" placeholder="Search by name or description" aria-label="Search" />
       </div>
-      <label>Zona<select id="filter-zone">${zones}</select></label>
-      <label>Categoría<select id="filter-category">${categories}</select></label>
+      <label>Area<select id="filter-zone">${zones}</select></label>
+      <label>Category<select id="filter-category">${categories}</select></label>
       <label>Tokens<select id="filter-token">${tokens}</select></label>
     </div>
-    <div class="filter-row" aria-label="Filtros rápidos">
-      <button type="button" class="chip" data-filter="verified">Verificados</button>
-      <button type="button" class="chip" data-filter="promo">Promo activa</button>
-      <button type="button" class="chip" data-filter="openNow">Abiertos ahora</button>
+    <div class="filter-row" aria-label="Quick filters">
+      <button type="button" class="chip" data-filter="verified">Verified</button>
+      <button type="button" class="chip" data-filter="promo">Active promo</button>
+      <button type="button" class="chip" data-filter="openNow">Open now</button>
       <button type="button" class="chip" data-filter="raypay">RayPay ready</button>
-      <button type="button" class="chip" id="reset-filters">Limpiar filtros</button>
+      <button type="button" class="chip" id="reset-filters">Clear filters</button>
     </div>
   `;
 
@@ -174,7 +174,7 @@ function updateListMeta() {
   const meta = document.getElementById('list-meta');
   if (!meta) return;
   const openNow = state.filtered.filter((b) => b.open_now).length;
-  meta.textContent = `${state.filtered.length} negocios · ${openNow} abiertos ahora`;
+  meta.textContent = `${state.filtered.length} businesses · ${openNow} open now`;
 }
 
 function createMarker(business) {
@@ -226,21 +226,21 @@ function renderList() {
   list.innerHTML = state.filtered
     .map((business) => {
       const badges = [];
-      if (business.verified) badges.push('<span class="card-badge">Verificado</span>');
+      if (business.verified) badges.push('<span class="card-badge">Verified</span>');
       if (business.raypay_ready) badges.push('<span class="card-badge">RayPay ready</span>');
-      if (business.new) badges.push('<span class="card-badge">Nuevo</span>');
-      if (business.promo?.active) badges.push('<span class="card-badge">Promo activa</span>');
+      if (business.new) badges.push('<span class="card-badge">New</span>');
+      if (business.promo?.active) badges.push('<span class="card-badge">Active promo</span>');
 
       const statusClass = business.open_now ? 'status' : 'status off';
-      const statusText = business.open_now ? 'Abierto ahora' : 'Cerrado';
+      const statusText = business.open_now ? 'Open now' : 'Closed';
 
       return `
         <article class="card" data-id="${business.id}">
           <div class="card-media" data-photo="${getPhoto(business)}">
             <div class="card-badges">${badges.join('')}</div>
             <div class="float-actions">
-              <a class="float-button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}" aria-label="Abrir WhatsApp de ${business.name}">💬</a>
-              <a class="float-button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}" aria-label="Abrir Google Maps de ${business.name}">📍</a>
+              <a class="float-button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}" aria-label="Open WhatsApp for ${business.name}">💬</a>
+              <a class="float-button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}" aria-label="Open Google Maps for ${business.name}">📍</a>
             </div>
           </div>
           <div class="card-body">
@@ -267,7 +267,7 @@ function renderList() {
           </div>
           <div class="card-footer">
             <div class="actions">
-              <a class="button primary" href="business.html?id=${business.id}">Ver ficha</a>
+              <a class="button primary" href="business.html?id=${business.id}">View profile</a>
               <a class="button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}">Google Maps</a>
               <a class="button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}">WhatsApp</a>
             </div>
@@ -313,7 +313,7 @@ function renderRoutes() {
   if (!container) return;
   const openBusinesses = state.filtered.filter((b) => b.open_now).sort((a, b) => (b.rating || 0) - (a.rating || 0));
   const routes = openBusinesses.slice(0, 3).map((biz, index) => ({
-    title: `Ruta ${index + 1}: ${biz.zone}`,
+    title: `Route ${index + 1}: ${biz.zone}`,
     stops: [biz.name, state.businesses.find((b) => b.zone === biz.zone && b.id !== biz.id)?.name].filter(Boolean),
     tokens: biz.tokens || [],
   }));
@@ -339,7 +339,7 @@ function renderZonePage(zone) {
   if (!headline || !summary) return;
 
   headline.textContent = `${zone}`;
-  summary.textContent = `Explora spots cripto en ${zone}. Esta selección se actualiza desde JSON para mantener datos consistentes entre zonas.`;
+  summary.textContent = `Explore crypto spots in ${zone}. This selection updates from JSON to keep data consistent across areas.`;
   state.filters.zone = zone;
   applyFilters();
 
@@ -362,9 +362,9 @@ function renderBusinessDetail(id) {
   }
 
   const badges = [];
-  if (business.verified) badges.push('<span class="card-badge">Verificado</span>');
+  if (business.verified) badges.push('<span class="card-badge">Verified</span>');
   if (business.raypay_ready) badges.push('<span class="card-badge">RayPay ready</span>');
-  if (business.new) badges.push('<span class="card-badge">Nuevo</span>');
+  if (business.new) badges.push('<span class="card-badge">New</span>');
   if (business.promo?.active) badges.push(`<span class="card-badge">${business.promo.text}</span>`);
 
   const photos = business.photos || [];
@@ -380,10 +380,10 @@ function renderBusinessDetail(id) {
             <p class="pill">${business.zone} · ${business.category}</p>
             <h2 class="detail-heading">${business.name}</h2>
           </div>
-          <a class="button" href="index.html">← Volver</a>
+          <a class="button" href="index.html">← Back</a>
         </div>
         <div class="meta-row">
-          <span class="status ${business.open_now ? '' : 'off'}">${business.open_now ? 'Abierto ahora' : 'Cerrado'}</span>
+          <span class="status ${business.open_now ? '' : 'off'}">${business.open_now ? 'Open now' : 'Closed'}</span>
           <span class="pill small">⭐ ${business.rating || 'N/A'}</span>
           <span class="pill small">${business.hours?.open || '--:--'} - ${business.hours?.close || '--:--'}</span>
         </div>
@@ -393,17 +393,17 @@ function renderBusinessDetail(id) {
         </div>
         <div class="list-item">
           <div>
-            <h4>Dirección</h4>
+            <h4>Address</h4>
             <small>${business.address}</small>
           </div>
-          <a class="button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}">Abrir en Google Maps</a>
+          <a class="button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}">Open in Google Maps</a>
         </div>
         <div class="list-item">
           <div>
-            <h4>Contacto</h4>
+            <h4>Contact</h4>
             <small>Tel: ${business.phone}</small>
           </div>
-          <a class="button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}">Enviar WhatsApp</a>
+          <a class="button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}">Send WhatsApp</a>
         </div>
         <ul class="highlight-list">
           ${(business.highlights || []).map((h) => `<li>${h}</li>`).join('')}
@@ -470,7 +470,7 @@ function handleForm() {
       .filter(Boolean);
     business.rating = parseFloat(business.rating) || 4.5;
     business.googleMaps = `https://www.google.com/maps?q=${business.coords.lat},${business.coords.lng}`;
-    business.whatsapp = `https://wa.me/${business.phone.replace(/[^\d]/g, '')}?text=${encodeURIComponent('Olá, tenho interesse!')}`;
+    business.whatsapp = `https://wa.me/${business.phone.replace(/[^\d]/g, '')}?text=${encodeURIComponent('Hello, I am interested!')}`;
     business.promo = { active: false, text: '' };
     business.verified = false;
     business.raypay_ready = false;
@@ -483,7 +483,7 @@ function handleForm() {
 
     const toast = document.querySelector('#form-toast');
     if (toast) {
-      toast.textContent = 'Negócio agregado localmente (demo)';
+      toast.textContent = 'Business added locally (demo)';
       toast.style.opacity = '1';
       setTimeout(() => (toast.style.opacity = '0'), 2500);
     }

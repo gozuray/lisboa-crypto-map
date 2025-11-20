@@ -1,7 +1,7 @@
 {
   "name": "lisboa-crypto-map",
   "version": "1.0.0",
-  "description": "Mapa cripto de Lisboa con frontend estático y backend opcional para estadísticas.",
+  "description": "Lisbon crypto map with a static frontend and optional backend for analytics.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
