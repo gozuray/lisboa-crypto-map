@@ -68,6 +68,12 @@ nav {
   flex-wrap: wrap;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 nav a {
   padding: 10px 14px;
   border: 1px solid var(--border);
@@ -82,6 +88,37 @@ nav a.active {
   border-color: var(--accent);
   color: #0f1115;
   background: var(--accent);
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.language-switcher select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+}
+
+.language-switcher select:focus-visible {
+  border-color: var(--accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .hero {

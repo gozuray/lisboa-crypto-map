@@ -1,0 +1,110 @@
+{
+  "titles": {
+    "home": "خريطة كريبتو لشبونة",
+    "detail": "ملف العمل · خريطة كريبتو لشبونة",
+    "zone": "{zone} · خريطة كريبتو لشبونة"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "baixa": "Baixa",
+    "alfama": "Alfama",
+    "parque": "Parque das Nações"
+  },
+  "hero": {
+    "pill": "خريطة تفاعلية · مدفوعات كريبتو",
+    "title": "أماكن ويب3 في لشبونة مع بحث متقدم وملفات غنية.",
+    "description": "استكشف الأعمال التي تقبل العملات المشفرة، وفلتر حسب الرموز، الفئات والمناطق، وشارك المواقع عبر خرائط جوجل وواتساب. كل شيء مدعوم ببيانات JSON جاهزة للتوسع إلى مدن جديدة."
+  },
+  "listing": {
+    "pill": "القائمة",
+    "title": "أعمال مميزة",
+    "baixa": "خريطة بايكسا",
+    "alfama": "خريطة ألفاما",
+    "parque": "خريطة باركي",
+    "meta": "{count} أعمال · {openNow} مفتوح الآن"
+  },
+  "routes": {
+    "pill": "مسارات كريبتو",
+    "title": "اقتراحات سريعة",
+    "subtitle": "مسارات تجمع بين الأعمال المفتوحة الآن وذات السمعة الجيدة.",
+    "routeTitle": "المسار {index}: {zone}"
+  },
+  "form": {
+    "pill": "نموذج",
+    "title": "إضافة عمل جديد",
+    "fields": {
+      "name": { "label": "الاسم", "placeholder": "اسم العمل" },
+      "area": { "label": "المنطقة", "placeholder": "اختر المنطقة" },
+      "category": { "label": "الفئة", "placeholder": "مقهى، عمل مشترك، بار" },
+      "phone": { "label": "هاتف", "placeholder": "+351..." },
+      "tokens": { "label": "الرموز", "placeholder": "SOL, USDC" },
+      "rating": { "label": "التقييم", "placeholder": "4.8" },
+      "description": { "label": "الوصف", "placeholder": "ما الذي يميز هذا المكان؟" },
+      "address": { "label": "العنوان", "placeholder": "Rua ..." },
+      "lat": { "label": "خط العرض" },
+      "lng": { "label": "خط الطول" },
+      "highlights": { "label": "مميزات (مفصولة بفواصل)", "placeholder": "واي فاي، تراس، فعاليات" }
+    },
+    "submit": "إضافة",
+    "reset": "مسح",
+    "toast": "تمت إضافة العمل محليًا (تجريبي)"
+  },
+  "filters": {
+    "label": "فلاتر",
+    "searchPlaceholder": "ابحث بالاسم أو الوصف",
+    "searchLabel": "بحث",
+    "area": "المنطقة",
+    "category": "الفئة",
+    "token": "رمز",
+    "chips": {
+      "verified": "موثق",
+      "promo": "عرض نشط",
+      "openNow": "مفتوح الآن",
+      "raypay": "جاهز لـ RayPay",
+      "reset": "مسح الفلاتر"
+    }
+  },
+  "cards": {
+    "badges": {
+      "verified": "موثق",
+      "raypay": "جاهز لـ RayPay",
+      "new": "جديد",
+      "promo": "عرض نشط"
+    },
+    "status": { "open": "مفتوح الآن", "closed": "مغلق" },
+    "actions": { "viewProfile": "عرض الملف", "googleMaps": "خرائط جوجل", "whatsapp": "واتساب" },
+    "hours": "{open} - {close}"
+  },
+  "zone": {
+    "pill": "منطقة",
+    "summary": "استكشف أماكن الكريبتو في {zone}. يتم تحديث هذه القائمة من JSON للحفاظ على اتساق البيانات بين المناطق.",
+    "title": "أماكن كريبتو في {zone}",
+    "footer": "بيانات من JSON · صفحة فرعية لـ {zone}.",
+    "back": "← الرئيسية",
+    "openMaps": "فتح في خرائط جوجل"
+  },
+  "detail": {
+    "notFound": "لم يتم العثور على العمل.",
+    "back": "← رجوع",
+    "address": "العنوان",
+    "contact": "تواصل",
+    "phone": "هاتف: {phone}",
+    "sendWhatsapp": "إرسال واتساب",
+    "openMaps": "فتح في خرائط جوجل"
+  },
+  "footer": {
+    "main": "خريطة كريبتو لشبونة · بيانات JSON · وضع تجريبي مع باك إند اختياري.",
+    "detail": "ملف فردي مع روابط لخرائط جوجل وواتساب."
+  },
+  "mobileNav": {
+    "listing": "القائمة",
+    "routes": "مسارات",
+    "add": "إضافة",
+    "map": "خريطة",
+    "home": "الرئيسية",
+    "profile": "الملف"
+  },
+  "language": {
+    "label": "اللغة"
+  }
+}

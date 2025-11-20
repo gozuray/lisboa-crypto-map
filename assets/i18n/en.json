@@ -1,0 +1,110 @@
+{
+  "titles": {
+    "home": "Lisboa Crypto Map",
+    "detail": "Business profile · Lisboa Crypto Map",
+    "zone": "{zone} · Lisboa Crypto Map"
+  },
+  "navigation": {
+    "home": "Home",
+    "baixa": "Baixa",
+    "alfama": "Alfama",
+    "parque": "Parque das Nações"
+  },
+  "hero": {
+    "pill": "Interactive map · Crypto payments",
+    "title": "Web3 spots in Lisbon with advanced search and rich profiles.",
+    "description": "Explore businesses that accept crypto, filter by tokens, categories, and areas, and share locations via Google Maps and WhatsApp. Everything is powered by a JSON source ready to scale to new cities."
+  },
+  "listing": {
+    "pill": "Listing",
+    "title": "Featured businesses",
+    "baixa": "Baixa map",
+    "alfama": "Alfama map",
+    "parque": "Parque map",
+    "meta": "{count} businesses · {openNow} open now"
+  },
+  "routes": {
+    "pill": "Crypto routes",
+    "title": "Quick suggestions",
+    "subtitle": "Combined routes with businesses open now and strong reputations.",
+    "routeTitle": "Route {index}: {zone}"
+  },
+  "form": {
+    "pill": "Form",
+    "title": "Add new business",
+    "fields": {
+      "name": { "label": "Name", "placeholder": "Business name" },
+      "area": { "label": "Area", "placeholder": "Select area" },
+      "category": { "label": "Category", "placeholder": "Coffee shop, cowork, bar" },
+      "phone": { "label": "Phone", "placeholder": "+351..." },
+      "tokens": { "label": "Tokens", "placeholder": "SOL, USDC" },
+      "rating": { "label": "Rating", "placeholder": "4.8" },
+      "description": { "label": "Description", "placeholder": "What makes this place unique?" },
+      "address": { "label": "Address", "placeholder": "Rua ..." },
+      "lat": { "label": "Latitude" },
+      "lng": { "label": "Longitude" },
+      "highlights": { "label": "Highlights (comma-separated)", "placeholder": "WiFi, Terrace, Events" }
+    },
+    "submit": "Add",
+    "reset": "Clear",
+    "toast": "Business added locally (demo)"
+  },
+  "filters": {
+    "label": "Filters",
+    "searchPlaceholder": "Search by name or description",
+    "searchLabel": "Search",
+    "area": "Area",
+    "category": "Category",
+    "token": "Token",
+    "chips": {
+      "verified": "Verified",
+      "promo": "Active promo",
+      "openNow": "Open now",
+      "raypay": "RayPay ready",
+      "reset": "Clear filters"
+    }
+  },
+  "cards": {
+    "badges": {
+      "verified": "Verified",
+      "raypay": "RayPay ready",
+      "new": "New",
+      "promo": "Active promo"
+    },
+    "status": { "open": "Open now", "closed": "Closed" },
+    "actions": { "viewProfile": "View profile", "googleMaps": "Google Maps", "whatsapp": "WhatsApp" },
+    "hours": "{open} - {close}"
+  },
+  "zone": {
+    "pill": "Area",
+    "summary": "Explore crypto spots in {zone}. This selection updates from JSON to keep data consistent across areas.",
+    "title": "Crypto spots in {zone}",
+    "footer": "Data from JSON · {zone} subpage.",
+    "back": "← Home",
+    "openMaps": "Open in Google Maps"
+  },
+  "detail": {
+    "notFound": "Business not found.",
+    "back": "← Back",
+    "address": "Address",
+    "contact": "Contact",
+    "phone": "Tel: {phone}",
+    "sendWhatsapp": "Send WhatsApp",
+    "openMaps": "Open in Google Maps"
+  },
+  "footer": {
+    "main": "Lisboa Crypto Map · Data from JSON · Demo mode with optional backend.",
+    "detail": "Individual profile with links to Google Maps and WhatsApp."
+  },
+  "mobileNav": {
+    "listing": "Listing",
+    "routes": "Routes",
+    "add": "Add",
+    "map": "Map",
+    "home": "Home",
+    "profile": "Profile"
+  },
+  "language": {
+    "label": "Language"
+  }
+}

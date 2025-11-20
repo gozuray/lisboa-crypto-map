@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Individual profile with accepted tokens, promos, and routes from Lisboa Crypto Map." />
-  <title>Business profile · Lisboa Crypto Map</title>
+  <title data-i18n="titles.detail">Business profile · Lisboa Crypto Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -17,12 +17,15 @@
       </svg>
       Lisboa <span>Crypto Map</span>
     </div>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="zones/baixa.html">Baixa</a>
-      <a href="zones/alfama.html">Alfama</a>
-      <a href="zones/parque.html">Parque das Nações</a>
-    </nav>
+    <div class="header-actions">
+      <nav aria-label="Main navigation">
+        <a href="index.html" data-i18n="navigation.home">Home</a>
+        <a href="zones/baixa.html" data-i18n="navigation.baixa">Baixa</a>
+        <a href="zones/alfama.html" data-i18n="navigation.alfama">Alfama</a>
+        <a href="zones/parque.html" data-i18n="navigation.parque">Parque das Nações</a>
+      </nav>
+      <div class="language-switcher" id="language-switcher"></div>
+    </div>
   </header>
 
   <main class="app-shell">
@@ -32,16 +35,17 @@
   </main>
 
   <footer>
-    Individual profile with links to Google Maps and WhatsApp.
+    <span data-i18n="footer.detail">Individual profile with links to Google Maps and WhatsApp.</span>
   </footer>
 
   <nav class="mobile-nav" aria-label="Quick actions">
-    <a href="index.html">Home</a>
-    <a href="#business-detail">Profile</a>
-    <a href="#" id="scroll-map">Map</a>
+    <a href="index.html" data-i18n="navigation.home">Home</a>
+    <a href="#business-detail" data-i18n="mobileNav.profile">Profile</a>
+    <a href="#" id="scroll-map" data-i18n="mobileNav.map">Map</a>
   </nav>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

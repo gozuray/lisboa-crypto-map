@@ -1,0 +1,110 @@
+{
+  "titles": {
+    "home": "里斯本加密地图",
+    "detail": "商家档案 · 里斯本加密地图",
+    "zone": "{zone} · 里斯本加密地图"
+  },
+  "navigation": {
+    "home": "首页",
+    "baixa": "Baixa",
+    "alfama": "Alfama",
+    "parque": "Parque das Nações"
+  },
+  "hero": {
+    "pill": "互动地图 · 加密支付",
+    "title": "里斯本的 Web3 场所，提供高级搜索和丰富的资料。",
+    "description": "探索支持加密支付的商家，按代币、类别和区域筛选，并通过 Google 地图和 WhatsApp 分享位置。所有内容由可扩展到新城市的 JSON 数据源驱动。"
+  },
+  "listing": {
+    "pill": "列表",
+    "title": "精选商家",
+    "baixa": "Baixa 地图",
+    "alfama": "Alfama 地图",
+    "parque": "Parque 地图",
+    "meta": "{count} 家商家 · {openNow} 家正在营业"
+  },
+  "routes": {
+    "pill": "加密路线",
+    "title": "快速推荐",
+    "subtitle": "组合路线，包含当前营业且口碑良好的商家。",
+    "routeTitle": "路线 {index}：{zone}"
+  },
+  "form": {
+    "pill": "表单",
+    "title": "添加新商家",
+    "fields": {
+      "name": { "label": "名称", "placeholder": "商家名称" },
+      "area": { "label": "区域", "placeholder": "选择区域" },
+      "category": { "label": "类别", "placeholder": "咖啡店、联合办公、酒吧" },
+      "phone": { "label": "电话", "placeholder": "+351..." },
+      "tokens": { "label": "代币", "placeholder": "SOL, USDC" },
+      "rating": { "label": "评分", "placeholder": "4.8" },
+      "description": { "label": "描述", "placeholder": "这个地方有什么特别？" },
+      "address": { "label": "地址", "placeholder": "Rua ..." },
+      "lat": { "label": "纬度" },
+      "lng": { "label": "经度" },
+      "highlights": { "label": "亮点（用逗号分隔）", "placeholder": "WiFi、露台、活动" }
+    },
+    "submit": "添加",
+    "reset": "清除",
+    "toast": "已在本地添加商家（演示）"
+  },
+  "filters": {
+    "label": "筛选",
+    "searchPlaceholder": "按名称或描述搜索",
+    "searchLabel": "搜索",
+    "area": "区域",
+    "category": "类别",
+    "token": "代币",
+    "chips": {
+      "verified": "已验证",
+      "promo": "促销中",
+      "openNow": "营业中",
+      "raypay": "支持 RayPay",
+      "reset": "清除筛选"
+    }
+  },
+  "cards": {
+    "badges": {
+      "verified": "已验证",
+      "raypay": "支持 RayPay",
+      "new": "新",
+      "promo": "促销中"
+    },
+    "status": { "open": "营业中", "closed": "已打烊" },
+    "actions": { "viewProfile": "查看资料", "googleMaps": "Google 地图", "whatsapp": "WhatsApp" },
+    "hours": "{open} - {close}"
+  },
+  "zone": {
+    "pill": "区域",
+    "summary": "探索 {zone} 的加密地点。该列表从 JSON 更新，以保持各区域数据一致。",
+    "title": "{zone} 的加密地点",
+    "footer": "来源 JSON · {zone} 子页面。",
+    "back": "← 返回首页",
+    "openMaps": "在 Google 地图打开"
+  },
+  "detail": {
+    "notFound": "未找到商家。",
+    "back": "← 返回",
+    "address": "地址",
+    "contact": "联系",
+    "phone": "电话：{phone}",
+    "sendWhatsapp": "发送 WhatsApp",
+    "openMaps": "在 Google 地图打开"
+  },
+  "footer": {
+    "main": "里斯本加密地图 · JSON 数据 · 演示模式，可选后端。",
+    "detail": "包含 Google 地图和 WhatsApp 链接的个人资料。"
+  },
+  "mobileNav": {
+    "listing": "列表",
+    "routes": "路线",
+    "add": "添加",
+    "map": "地图",
+    "home": "首页",
+    "profile": "资料"
+  },
+  "language": {
+    "label": "语言"
+  }
+}

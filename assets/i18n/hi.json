@@ -1,0 +1,110 @@
+{
+  "titles": {
+    "home": "लिस्बन क्रिप्टो मैप",
+    "detail": "व्यवसाय प्रोफ़ाइल · लिस्बन क्रिप्टो मैप",
+    "zone": "{zone} · लिस्बन क्रिप्टो मैप"
+  },
+  "navigation": {
+    "home": "होम",
+    "baixa": "Baixa",
+    "alfama": "Alfama",
+    "parque": "Parque das Nações"
+  },
+  "hero": {
+    "pill": "इंटरैक्टिव मैप · क्रिप्टो भुगतान",
+    "title": "लिस्बन में वेब3 स्थान, उन्नत खोज और समृद्ध प्रोफ़ाइल्स के साथ।",
+    "description": "क्रिप्टो स्वीकार करने वाले व्यवसाय खोजें, टोकन, श्रेणी और क्षेत्रों के अनुसार फ़िल्टर करें, और Google मैप्स व WhatsApp से स्थान साझा करें। सब कुछ JSON स्रोत से संचालित है जो नए शहरों तक स्केल हो सकता है।"
+  },
+  "listing": {
+    "pill": "सूची",
+    "title": "चयनित व्यवसाय",
+    "baixa": "Baixa मानचित्र",
+    "alfama": "Alfama मानचित्र",
+    "parque": "Parque मानचित्र",
+    "meta": "{count} व्यवसाय · {openNow} अभी खुले हैं"
+  },
+  "routes": {
+    "pill": "क्रिप्टो मार्ग",
+    "title": "त्वरित सुझाव",
+    "subtitle": "संयोजित मार्ग जिनमें अभी खुले और विश्वसनीय व्यवसाय हैं।",
+    "routeTitle": "मार्ग {index}: {zone}"
+  },
+  "form": {
+    "pill": "फॉर्म",
+    "title": "नया व्यवसाय जोड़ें",
+    "fields": {
+      "name": { "label": "नाम", "placeholder": "व्यवसाय का नाम" },
+      "area": { "label": "क्षेत्र", "placeholder": "क्षेत्र चुनें" },
+      "category": { "label": "श्रेणी", "placeholder": "कॉफी शॉप, कोवर्क, बार" },
+      "phone": { "label": "फ़ोन", "placeholder": "+351..." },
+      "tokens": { "label": "टोकन", "placeholder": "SOL, USDC" },
+      "rating": { "label": "रेटिंग", "placeholder": "4.8" },
+      "description": { "label": "विवरण", "placeholder": "यह जगह खास क्यों है?" },
+      "address": { "label": "पता", "placeholder": "Rua ..." },
+      "lat": { "label": "अक्षांश" },
+      "lng": { "label": "देशांतर" },
+      "highlights": { "label": "मुख्य बिंदु (कॉमा से अलग)", "placeholder": "WiFi, टैरेस, इवेंट्स" }
+    },
+    "submit": "जोड़ें",
+    "reset": "साफ़ करें",
+    "toast": "व्यवसाय स्थानीय रूप से जोड़ा गया (डेमो)"
+  },
+  "filters": {
+    "label": "फ़िल्टर",
+    "searchPlaceholder": "नाम या विवरण से खोजें",
+    "searchLabel": "खोज",
+    "area": "क्षेत्र",
+    "category": "श्रेणी",
+    "token": "टोकन",
+    "chips": {
+      "verified": "सत्यापित",
+      "promo": "सक्रिय प्रोमो",
+      "openNow": "अभी खुला",
+      "raypay": "RayPay तैयार",
+      "reset": "फ़िल्टर साफ़ करें"
+    }
+  },
+  "cards": {
+    "badges": {
+      "verified": "सत्यापित",
+      "raypay": "RayPay तैयार",
+      "new": "नया",
+      "promo": "सक्रिय प्रोमो"
+    },
+    "status": { "open": "अभी खुला", "closed": "बंद" },
+    "actions": { "viewProfile": "प्रोफ़ाइल देखें", "googleMaps": "Google मैप्स", "whatsapp": "WhatsApp" },
+    "hours": "{open} - {close}"
+  },
+  "zone": {
+    "pill": "क्षेत्र",
+    "summary": "{zone} में क्रिप्टो स्थान खोजें। यह सूची JSON से अपडेट होती है ताकि सभी क्षेत्रों में डेटा समान रहे।",
+    "title": "{zone} में क्रिप्टो स्थान",
+    "footer": "डेटा JSON से · {zone} उपपृष्ठ।",
+    "back": "← होम",
+    "openMaps": "Google मैप्स में खोलें"
+  },
+  "detail": {
+    "notFound": "व्यवसाय नहीं मिला।",
+    "back": "← वापस",
+    "address": "पता",
+    "contact": "संपर्क",
+    "phone": "टेल: {phone}",
+    "sendWhatsapp": "WhatsApp भेजें",
+    "openMaps": "Google मैप्स में खोलें"
+  },
+  "footer": {
+    "main": "लिस्बन क्रिप्टो मैप · JSON डेटा · वैकल्पिक बैकएंड के साथ डेमो मोड।",
+    "detail": "Google मैप्स और WhatsApp लिंक वाले व्यक्तिगत प्रोफ़ाइल।"
+  },
+  "mobileNav": {
+    "listing": "सूची",
+    "routes": "मार्ग",
+    "add": "जोड़ें",
+    "map": "मानचित्र",
+    "home": "होम",
+    "profile": "प्रोफ़ाइल"
+  },
+  "language": {
+    "label": "भाषा"
+  }
+}

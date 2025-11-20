@@ -13,6 +13,7 @@ const state = {
   },
   map: null,
   markers: [],
+  detailMap: null,
 };
 
 const tokenIcons = {
@@ -21,6 +22,17 @@ const tokenIcons = {
   BTC: '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#f7931a"/><path fill="#fff" d="M19.4 14.7c.5-.8.7-1.7.4-2.8-.3-1.8-1.8-2.6-3.8-2.7V6.5h-1.6v2.7h-1.3V6.5h-1.6v2.7h-2.2v1.7h1.6c.2 0 .3.2.3.3v7.5c0 .2-.1.3-.3.3h-1.6v1.8h2.2v2.8h1.6v-2.8h1.3v2.8h1.6v-2.8c2.6-.2 4.1-1.6 4.1-3.7 0-1.6-.8-2.6-2-3.1Zm-4.7-3.7c1.2 0 2.2.3 2.4 1.4.2 1-.6 1.6-1.8 1.7h-1.8v-3.1h1.2Zm.6 8.7h-1.8v-3.3h1.9c1.4 0 2.2.5 2.2 1.6 0 1.2-.9 1.7-2.3 1.7Z"/></svg>',
   ETH: '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#627eea"/><path fill="#fff" d="M16.1 4.6 10 16.5l6.1 3.6 6-3.6-6-11.9Zm0 22.8 6.1-8.6-6.1 3.6-6.1-3.6 6.1 8.6Z"/></svg>',
   USDT: '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#26a17b"/><path fill="#fff" d="M18.2 15.2v-1.5h4V9.8H9.8v3.9h4v1.5c-3.9.2-6.8.9-6.8 1.8s3 1.6 6.8 1.8v6.2h4.3v-6.2c3.8-.2 6.8-.9 6.8-1.8 0-.8-3-1.6-6.8-1.8Zm0 3.1v-.8c3.5 0 6-.5 6-.9s-2.5-.9-6-.9V14h-4.3v1.8c-3.6 0-6 .4-6 .9s2.4.9 6 .9v.8c-3.7-.1-6.6-.7-6.6-1.5 0-.7 2.9-1.3 6.6-1.4v-1.7h4.3v1.7c3.7.1 6.6.7 6.6 1.4-.1.8-3 1.4-6.6 1.5Z"/></svg>',
+};
+
+const languageNames = {
+  en: 'English',
+  es: 'Español',
+  pt: 'Português',
+  fr: 'Français',
+  zh: '中文',
+  hi: 'हिन्दी',
+  ar: 'العربية',
+  bn: 'বাংলা',
 };
 
 async function loadBusinesses() {
@@ -74,26 +86,28 @@ function renderFilters() {
   const container = document.querySelector('#filters');
   if (!container) return;
 
-  const categories = buildSelectOptions(state.businesses.map((b) => b.category), 'Category');
-  const zones = buildSelectOptions(state.businesses.map((b) => b.zone), 'Area');
-  const tokens = buildSelectOptions(state.businesses.flatMap((b) => b.tokens || []), 'Token');
+  const categories = buildSelectOptions(state.businesses.map((b) => b.category), i18n.t('filters.category'));
+  const zones = buildSelectOptions(state.businesses.map((b) => b.zone), i18n.t('filters.area'));
+  const tokens = buildSelectOptions(state.businesses.flatMap((b) => b.tokens || []), i18n.t('filters.token'));
 
   container.innerHTML = `
     <div class="filter-grid">
       <div class="search-box">
         <svg width="18" height="18" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="11" r="5.5" stroke="currentColor" stroke-width="1.5"/></svg>
-        <input type="search" id="search" placeholder="Search by name or description" aria-label="Search" />
+        <input type="search" id="search" placeholder="${i18n.t('filters.searchPlaceholder')}" aria-label="${i18n.t(
+          'filters.searchLabel'
+        )}" />
       </div>
-      <label>Area<select id="filter-zone">${zones}</select></label>
-      <label>Category<select id="filter-category">${categories}</select></label>
-      <label>Tokens<select id="filter-token">${tokens}</select></label>
+      <label>${i18n.t('filters.area')}<select id="filter-zone">${zones}</select></label>
+      <label>${i18n.t('filters.category')}<select id="filter-category">${categories}</select></label>
+      <label>${i18n.t('filters.token')}<select id="filter-token">${tokens}</select></label>
     </div>
     <div class="filter-row" aria-label="Quick filters">
-      <button type="button" class="chip" data-filter="verified">Verified</button>
-      <button type="button" class="chip" data-filter="promo">Active promo</button>
-      <button type="button" class="chip" data-filter="openNow">Open now</button>
-      <button type="button" class="chip" data-filter="raypay">RayPay ready</button>
-      <button type="button" class="chip" id="reset-filters">Clear filters</button>
+      <button type="button" class="chip" data-filter="verified">${i18n.t('filters.chips.verified')}</button>
+      <button type="button" class="chip" data-filter="promo">${i18n.t('filters.chips.promo')}</button>
+      <button type="button" class="chip" data-filter="openNow">${i18n.t('filters.chips.openNow')}</button>
+      <button type="button" class="chip" data-filter="raypay">${i18n.t('filters.chips.raypay')}</button>
+      <button type="button" class="chip" id="reset-filters">${i18n.t('filters.chips.reset')}</button>
     </div>
   `;
 
@@ -174,7 +188,7 @@ function updateListMeta() {
   const meta = document.getElementById('list-meta');
   if (!meta) return;
   const openNow = state.filtered.filter((b) => b.open_now).length;
-  meta.textContent = `${state.filtered.length} businesses · ${openNow} open now`;
+  meta.textContent = i18n.t('listing.meta', { count: state.filtered.length, openNow });
 }
 
 function createMarker(business) {
@@ -185,7 +199,7 @@ function createMarker(business) {
   marker.bindPopup(`
     <strong>${business.name}</strong><br/>
     ${business.zone} · ${business.category}<br/>
-    <a href="business.html?id=${business.id}">View profile</a>
+    <a href="business.html?id=${business.id}">${i18n.t('cards.actions.viewProfile')}</a>
   `);
   marker.addTo(state.map);
   state.markers.push(marker);
@@ -226,21 +240,21 @@ function renderList() {
   list.innerHTML = state.filtered
     .map((business) => {
       const badges = [];
-      if (business.verified) badges.push('<span class="card-badge">Verified</span>');
-      if (business.raypay_ready) badges.push('<span class="card-badge">RayPay ready</span>');
-      if (business.new) badges.push('<span class="card-badge">New</span>');
-      if (business.promo?.active) badges.push('<span class="card-badge">Active promo</span>');
+      if (business.verified) badges.push(`<span class="card-badge">${i18n.t('cards.badges.verified')}</span>`);
+      if (business.raypay_ready) badges.push(`<span class="card-badge">${i18n.t('cards.badges.raypay')}</span>`);
+      if (business.new) badges.push(`<span class="card-badge">${i18n.t('cards.badges.new')}</span>`);
+      if (business.promo?.active) badges.push(`<span class="card-badge">${i18n.t('cards.badges.promo')}</span>`);
 
       const statusClass = business.open_now ? 'status' : 'status off';
-      const statusText = business.open_now ? 'Open now' : 'Closed';
+      const statusText = business.open_now ? i18n.t('cards.status.open') : i18n.t('cards.status.closed');
 
       return `
         <article class="card" data-id="${business.id}">
           <div class="card-media" data-photo="${getPhoto(business)}">
             <div class="card-badges">${badges.join('')}</div>
             <div class="float-actions">
-              <a class="float-button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}" aria-label="Open WhatsApp for ${business.name}">💬</a>
-              <a class="float-button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}" aria-label="Open Google Maps for ${business.name}">📍</a>
+              <a class="float-button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}" aria-label="${i18n.t('cards.actions.whatsapp')} - ${business.name}">💬</a>
+              <a class="float-button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}" aria-label="${i18n.t('cards.actions.googleMaps')} - ${business.name}">📍</a>
             </div>
           </div>
           <div class="card-body">
@@ -267,11 +281,14 @@ function renderList() {
           </div>
           <div class="card-footer">
             <div class="actions">
-              <a class="button primary" href="business.html?id=${business.id}">View profile</a>
-              <a class="button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}">Google Maps</a>
-              <a class="button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}">WhatsApp</a>
+              <a class="button primary" href="business.html?id=${business.id}">${i18n.t('cards.actions.viewProfile')}</a>
+              <a class="button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}">${i18n.t('cards.actions.googleMaps')}</a>
+              <a class="button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}">${i18n.t('cards.actions.whatsapp')}</a>
             </div>
-            <span class="pill small">${business.hours?.open || '--:--'} - ${business.hours?.close || '--:--'}</span>
+            <span class="pill small">${i18n.t('cards.hours', {
+              open: business.hours?.open || '--:--',
+              close: business.hours?.close || '--:--',
+            })}</span>
           </div>
         </article>
       `;
@@ -313,7 +330,7 @@ function renderRoutes() {
   if (!container) return;
   const openBusinesses = state.filtered.filter((b) => b.open_now).sort((a, b) => (b.rating || 0) - (a.rating || 0));
   const routes = openBusinesses.slice(0, 3).map((biz, index) => ({
-    title: `Route ${index + 1}: ${biz.zone}`,
+    title: i18n.t('routes.routeTitle', { index: index + 1, zone: biz.zone }),
     stops: [biz.name, state.businesses.find((b) => b.zone === biz.zone && b.id !== biz.id)?.name].filter(Boolean),
     tokens: biz.tokens || [],
   }));
@@ -339,9 +356,21 @@ function renderZonePage(zone) {
   if (!headline || !summary) return;
 
   headline.textContent = `${zone}`;
-  summary.textContent = `Explore crypto spots in ${zone}. This selection updates from JSON to keep data consistent across areas.`;
+  summary.textContent = i18n.t('zone.summary', { zone });
   state.filters.zone = zone;
   applyFilters();
+
+  const zoneTitle = document.getElementById('title-listado');
+  if (zoneTitle) {
+    zoneTitle.textContent = i18n.t('zone.title', { zone });
+  }
+
+  const footerNote = document.querySelector('[data-i18n="zone.footer"]');
+  if (footerNote) {
+    footerNote.textContent = i18n.t('zone.footer', { zone });
+  }
+
+  setPageTitle(zone);
 
   const backLink = document.querySelector('#back-home');
   if (backLink) {
@@ -357,14 +386,14 @@ function renderBusinessDetail(id) {
   if (!container) return;
   const business = state.businesses.find((b) => b.id === id);
   if (!business) {
-    container.innerHTML = '<p class="muted">Business not found.</p>';
+    container.innerHTML = `<p class="muted">${i18n.t('detail.notFound')}</p>`;
     return;
   }
 
   const badges = [];
-  if (business.verified) badges.push('<span class="card-badge">Verified</span>');
-  if (business.raypay_ready) badges.push('<span class="card-badge">RayPay ready</span>');
-  if (business.new) badges.push('<span class="card-badge">New</span>');
+  if (business.verified) badges.push(`<span class="card-badge">${i18n.t('cards.badges.verified')}</span>`);
+  if (business.raypay_ready) badges.push(`<span class="card-badge">${i18n.t('cards.badges.raypay')}</span>`);
+  if (business.new) badges.push(`<span class="card-badge">${i18n.t('cards.badges.new')}</span>`);
   if (business.promo?.active) badges.push(`<span class="card-badge">${business.promo.text}</span>`);
 
   const photos = business.photos || [];
@@ -380,12 +409,15 @@ function renderBusinessDetail(id) {
             <p class="pill">${business.zone} · ${business.category}</p>
             <h2 class="detail-heading">${business.name}</h2>
           </div>
-          <a class="button" href="index.html">← Back</a>
+          <a class="button" href="index.html">${i18n.t('detail.back')}</a>
         </div>
         <div class="meta-row">
-          <span class="status ${business.open_now ? '' : 'off'}">${business.open_now ? 'Open now' : 'Closed'}</span>
+          <span class="status ${business.open_now ? '' : 'off'}">${business.open_now ? i18n.t('cards.status.open') : i18n.t('cards.status.closed')}</span>
           <span class="pill small">⭐ ${business.rating || 'N/A'}</span>
-          <span class="pill small">${business.hours?.open || '--:--'} - ${business.hours?.close || '--:--'}</span>
+          <span class="pill small">${i18n.t('cards.hours', {
+            open: business.hours?.open || '--:--',
+            close: business.hours?.close || '--:--',
+          })}</span>
         </div>
         <p class="muted">${business.description}</p>
         <div class="token-row">
@@ -393,17 +425,17 @@ function renderBusinessDetail(id) {
         </div>
         <div class="list-item">
           <div>
-            <h4>Address</h4>
+            <h4>${i18n.t('detail.address')}</h4>
             <small>${business.address}</small>
           </div>
-          <a class="button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}">Open in Google Maps</a>
+          <a class="button" href="${business.googleMaps}" target="_blank" rel="noopener" data-track="maps" data-id="${business.id}">${i18n.t('detail.openMaps')}</a>
         </div>
         <div class="list-item">
           <div>
-            <h4>Contact</h4>
-            <small>Tel: ${business.phone}</small>
+            <h4>${i18n.t('detail.contact')}</h4>
+            <small>${i18n.t('detail.phone', { phone: business.phone })}</small>
           </div>
-          <a class="button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}">Send WhatsApp</a>
+          <a class="button" href="${business.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp" data-id="${business.id}">${i18n.t('detail.sendWhatsapp')}</a>
         </div>
         <ul class="highlight-list">
           ${(business.highlights || []).map((h) => `<li>${h}</li>`).join('')}
@@ -414,15 +446,21 @@ function renderBusinessDetail(id) {
     </article>
   `;
 
+  document.title = i18n.t('titles.detail');
+
   hydrateMedia();
   registerTracking(container);
 
-  const detailMap = L.map('detail-map').setView([business.coords.lat, business.coords.lng], 15);
+  if (state.detailMap) {
+    state.detailMap.remove();
+  }
+
+  state.detailMap = L.map('detail-map').setView([business.coords.lat, business.coords.lng], 15);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; OpenStreetMap contributors',
-  }).addTo(detailMap);
-  L.marker([business.coords.lat, business.coords.lng]).addTo(detailMap).bindPopup(business.name);
+  }).addTo(state.detailMap);
+  L.marker([business.coords.lat, business.coords.lng]).addTo(state.detailMap).bindPopup(business.name);
 
   const scrollMap = document.querySelector('#scroll-map');
   if (scrollMap) {
@@ -483,33 +521,116 @@ function handleForm() {
 
     const toast = document.querySelector('#form-toast');
     if (toast) {
-      toast.textContent = 'Business added locally (demo)';
+      toast.textContent = i18n.t('form.toast');
       toast.style.opacity = '1';
       setTimeout(() => (toast.style.opacity = '0'), 2500);
     }
   });
 }
 
-function detectContext() {
+function setPageTitle(zoneName) {
+  const page = document.body.dataset.page;
+  if (page === 'zone') {
+    document.title = i18n.t('titles.zone', { zone: zoneName || document.body.dataset.zone || '' });
+    return;
+  }
+  if (page === 'detail') {
+    document.title = i18n.t('titles.detail');
+    return;
+  }
+  document.title = i18n.t('titles.home');
+}
+
+function setupLanguageSelector() {
+  const container = document.getElementById('language-switcher');
+  if (!container) return;
+  container.innerHTML = '';
+
+  const label = document.createElement('label');
+  label.className = 'sr-only';
+  label.setAttribute('for', 'language-select');
+  label.dataset.i18n = 'language.label';
+  label.textContent = i18n.t('language.label');
+
+  const select = document.createElement('select');
+  select.id = 'language-select';
+  select.setAttribute('aria-label', i18n.t('language.label'));
+
+  Object.entries(languageNames).forEach(([value, name]) => {
+    const option = document.createElement('option');
+    option.value = value;
+    option.textContent = name;
+    select.appendChild(option);
+  });
+
+  select.value = i18n.currentLanguage;
+  select.addEventListener('change', (event) => {
+    i18n.setLanguage(event.target.value);
+  });
+
+  container.appendChild(label);
+  container.appendChild(select);
+}
+
+function refreshUI() {
+  i18n.applyTranslations(document);
+  setupLanguageSelector();
+  setPageTitle(document.body.dataset.zone);
+
+  if (!state.businesses.length) return;
+
+  const page = document.body.dataset.page;
+
+  if (page === 'zone') {
+    renderFilters();
+    renderZonePage(document.body.dataset.zone || '');
+    return;
+  }
+
+  if (page === 'detail') {
+    const params = new URLSearchParams(window.location.search);
+    renderBusinessDetail(params.get('id'));
+    return;
+  }
+
+  renderHeroBadges();
+  renderFilters();
+  applyFilters();
+  renderRoutes();
+}
+
+async function detectContext() {
   const params = new URLSearchParams(window.location.search);
   const page = document.body.dataset.page;
+
+  setPageTitle(document.body.dataset.zone);
 
   if (page === 'home') {
     registerZoneLinks();
     handleForm();
-    loadBusinesses();
+    await loadBusinesses();
   }
 
   if (page === 'zone') {
     const zoneFromBody = document.body.dataset.zone;
     const zone = params.get('zone') || zoneFromBody || 'Baixa';
-    loadBusinesses().then(() => renderZonePage(zone));
+    await loadBusinesses();
+    renderZonePage(zone);
   }
 
   if (page === 'detail') {
     const id = params.get('id');
-    loadBusinesses().then(() => renderBusinessDetail(id));
+    await loadBusinesses();
+    renderBusinessDetail(id);
   }
 }
 
-document.addEventListener('DOMContentLoaded', detectContext);
+async function initializeApp() {
+  document.addEventListener('i18n:changed', refreshUI);
+  await i18n.init();
+  setupLanguageSelector();
+  await detectContext();
+  i18n.applyTranslations(document);
+}
+
+document.addEventListener('DOMContentLoaded', initializeApp);

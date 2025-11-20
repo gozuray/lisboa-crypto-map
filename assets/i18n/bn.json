@@ -1,0 +1,110 @@
+{
+  "titles": {
+    "home": "লিসবন ক্রিপ্টো ম্যাপ",
+    "detail": "ব্যবসার প্রোফাইল · লিসবন ক্রিপ্টো ম্যাপ",
+    "zone": "{zone} · লিসবন ক্রিপ্টো ম্যাপ"
+  },
+  "navigation": {
+    "home": "হোম",
+    "baixa": "Baixa",
+    "alfama": "Alfama",
+    "parque": "Parque das Nações"
+  },
+  "hero": {
+    "pill": "ইন্টারঅ্যাকটিভ ম্যাপ · ক্রিপ্টো পেমেন্ট",
+    "title": "লিসবনে ওয়েব৩ স্থান, উন্নত সার্চ এবং সমৃদ্ধ প্রোফাইলসহ।",
+    "description": "ক্রিপ্টো গ্রহণ করে এমন ব্যবসা অন্বেষণ করুন, টোকেন, ক্যাটাগরি ও এলাকাভিত্তিক ফিল্টার করুন, এবং Google Maps ও WhatsApp দিয়ে লোকেশন শেয়ার করুন। সব কিছুই নতুন শহরে বাড়ানোর জন্য প্রস্তুত JSON সূত্র থেকে চালিত।"
+  },
+  "listing": {
+    "pill": "তালিকা",
+    "title": "বাছাইকৃত ব্যবসা",
+    "baixa": "Baixa ম্যাপ",
+    "alfama": "Alfama ম্যাপ",
+    "parque": "Parque ম্যাপ",
+    "meta": "{count} টি ব্যবসা · {openNow} টি এখন খোলা"
+  },
+  "routes": {
+    "pill": "ক্রিপ্টো রুট",
+    "title": "দ্রুত পরামর্শ",
+    "subtitle": "যৌথ রুট যেখানে এখন খোলা ও বিশ্বস্ত ব্যবসা রয়েছে।",
+    "routeTitle": "রুট {index}: {zone}"
+  },
+  "form": {
+    "pill": "ফর্ম",
+    "title": "নতুন ব্যবসা যোগ করুন",
+    "fields": {
+      "name": { "label": "নাম", "placeholder": "ব্যবসার নাম" },
+      "area": { "label": "এলাকা", "placeholder": "এলাকা নির্বাচন করুন" },
+      "category": { "label": "ক্যাটাগরি", "placeholder": "কফি শপ, কোওয়ার্ক, বার" },
+      "phone": { "label": "ফোন", "placeholder": "+351..." },
+      "tokens": { "label": "টোকেন", "placeholder": "SOL, USDC" },
+      "rating": { "label": "রেটিং", "placeholder": "4.8" },
+      "description": { "label": "বর্ণনা", "placeholder": "এই জায়গাটি বিশেষ কেন?" },
+      "address": { "label": "ঠিকানা", "placeholder": "Rua ..." },
+      "lat": { "label": "অক্ষাংশ" },
+      "lng": { "label": "দ্রাঘিমা" },
+      "highlights": { "label": "বিশেষত্ব (কমা দিয়ে আলাদা)", "placeholder": "WiFi, টেরেস, ইভেন্ট" }
+    },
+    "submit": "যোগ করুন",
+    "reset": "মুছে ফেলুন",
+    "toast": "ব্যবসা স্থানীয়ভাবে যোগ করা হয়েছে (ডেমো)"
+  },
+  "filters": {
+    "label": "ফিল্টার",
+    "searchPlaceholder": "নাম বা বর্ণনা দিয়ে খুঁজুন",
+    "searchLabel": "অনুসন্ধান",
+    "area": "এলাকা",
+    "category": "ক্যাটাগরি",
+    "token": "টোকেন",
+    "chips": {
+      "verified": "যাচাই করা",
+      "promo": "সক্রিয় প্রোমো",
+      "openNow": "এখন খোলা",
+      "raypay": "RayPay প্রস্তুত",
+      "reset": "ফিল্টার মুছুন"
+    }
+  },
+  "cards": {
+    "badges": {
+      "verified": "যাচাই করা",
+      "raypay": "RayPay প্রস্তুত",
+      "new": "নতুন",
+      "promo": "সক্রিয় প্রোমো"
+    },
+    "status": { "open": "এখন খোলা", "closed": "বন্ধ" },
+    "actions": { "viewProfile": "প্রোফাইল দেখুন", "googleMaps": "Google ম্যাপস", "whatsapp": "WhatsApp" },
+    "hours": "{open} - {close}"
+  },
+  "zone": {
+    "pill": "এলাকা",
+    "summary": "{zone} এ ক্রিপ্টো স্থান আবিষ্কার করুন। এই তালিকা JSON থেকে আপডেট হয় যাতে সব এলাকায় তথ্য একই থাকে।",
+    "title": "{zone} এ ক্রিপ্টো স্থান",
+    "footer": "ডাটা JSON থেকে · {zone} সাবপেজ।",
+    "back": "← হোম",
+    "openMaps": "Google ম্যাপসে খুলুন"
+  },
+  "detail": {
+    "notFound": "ব্যবসা পাওয়া যায়নি।",
+    "back": "← ফিরে যান",
+    "address": "ঠিকানা",
+    "contact": "যোগাযোগ",
+    "phone": "টেল: {phone}",
+    "sendWhatsapp": "WhatsApp পাঠান",
+    "openMaps": "Google ম্যাপসে খুলুন"
+  },
+  "footer": {
+    "main": "লিসবন ক্রিপ্টো ম্যাপ · JSON ডাটা · বিকল্প ব্যাকএন্ডসহ ডেমো মোড।",
+    "detail": "Google ম্যাপস এবং WhatsApp লিঙ্কসহ ব্যক্তিগত প্রোফাইল।"
+  },
+  "mobileNav": {
+    "listing": "তালিকা",
+    "routes": "রুট",
+    "add": "যোগ করুন",
+    "map": "মানচিত্র",
+    "home": "হোম",
+    "profile": "প্রোফাইল"
+  },
+  "language": {
+    "label": "ভাষা"
+  }
+}
