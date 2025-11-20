@@ -185,7 +185,7 @@ function createMarker(business) {
   marker.bindPopup(`
     <strong>${business.name}</strong><br/>
     ${business.zone} · ${business.category}<br/>
-    <a href="business.html?id=${business.id}">Ver ficha</a>
+    <a href="business.html?id=${business.id}">View profile</a>
   `);
   marker.addTo(state.map);
   state.markers.push(marker);
@@ -357,7 +357,7 @@ function renderBusinessDetail(id) {
   if (!container) return;
   const business = state.businesses.find((b) => b.id === id);
   if (!business) {
-    container.innerHTML = '<p class="muted">Negocio no encontrado.</p>';
+    container.innerHTML = '<p class="muted">Business not found.</p>';
     return;
   }
 
